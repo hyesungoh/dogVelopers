@@ -1,14 +1,15 @@
-import styled from '@emotion/styled';
+import { css, Theme } from '@emotion/react';
 import { motion } from 'framer-motion';
 
 function Home() {
-  return <Div whileHover={{ scale: 1.2 }}>asdfasdf</Div>;
+  return <div css={dCss}>asdfasdf</div>;
 }
 
 export default Home;
 
-const Div = styled(motion.div)`
+const dCss = (theme: Theme) => css`
   width: 100px;
   height: 100px;
-  background-color: ${({ theme }) => theme.color.black};
+  background-color: red;
+  color: ${theme.color.black};
 `;
