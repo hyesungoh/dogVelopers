@@ -14,6 +14,7 @@ export default Layout;
 const wrapperStyle = css`
   width: 100%;
   max-width: 1024px;
-  padding: 0 22px;
+  height: 100%;
+  padding: 0 1.375rem;
   margin: 0 auto;
 `;

@@ -6,10 +6,15 @@ import GlobalStyle from 'styles/GlobalStyle';
 
 import Nav from 'components/Nav';
 import Footer from 'components/Footer';
+import Head from 'next/head';
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <ThemeProvider theme={theme}>
+      <Head>
+        <title>개발자들</title>
+      </Head>
+
       <GlobalStyle />
       <Nav />
       <Component {...pageProps} />

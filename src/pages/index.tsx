@@ -1,8 +1,14 @@
 import { css, Theme } from '@emotion/react';
-import { motion } from 'framer-motion';
+import Layout from 'components/common/Layout';
 
 function Home() {
-  return <div css={dCss}>asdfasdf</div>;
+  return (
+    <main css={dCss}>
+      <Layout>
+        <h1>개발자들</h1>
+      </Layout>
+    </main>
+  );
 }
 
 export default Home;

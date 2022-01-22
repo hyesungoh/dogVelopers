@@ -18,13 +18,23 @@ const globalStyle = (theme: Theme) => css`
     background-color: ${theme.color.black900};
     font-family: 'Noto Sans KR', sans-serif;
     font-weight: ${theme.fontWeight.normal};
+    font-size: 16px;
+
+    ${theme.mediaQuery.tablet} {
+      font-size: 14px;
+    }
+
+    ${theme.mediaQuery.mobile} {
+      font-size: 12px;
+    }
   }
 
   h1 {
     font-weight: ${theme.fontWeight.bold};
   }
 
-  a {
+  a,
+  button {
     all: unset;
     cursor: pointer;
   }
