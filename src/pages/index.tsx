@@ -8,8 +8,6 @@ function Home() {
 export default Home;
 
 const dCss = (theme: Theme) => css`
-  width: 100px;
-  height: 100px;
-  background-color: red;
-  color: ${theme.color.black};
+  width: 100%;
+  height: 2000px;
 `;

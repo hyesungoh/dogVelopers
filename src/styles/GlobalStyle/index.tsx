@@ -15,6 +15,17 @@ const globalStyle = (theme: Theme) => css`
 
   html {
     color: ${theme.color.white};
-    background-color: ${theme.color.black};
+    background-color: ${theme.color.black900};
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: ${theme.fontWeight.normal};
+  }
+
+  h1 {
+    font-weight: ${theme.fontWeight.bold};
+  }
+
+  a {
+    all: unset;
+    cursor: pointer;
   }
 `;
