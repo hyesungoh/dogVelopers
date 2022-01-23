@@ -21,7 +21,7 @@ function Record() {
       initial="initial"
       whileInView="whileInView"
       variants={inViewFadeInUpVariants}
-      viewport={{ once: false, margin: '-300px' }}
+      viewport={{ once: false, margin: '-150px' }}
     >
       <Layout>
         <div css={wrapperStyle}>
@@ -32,8 +32,10 @@ function Record() {
           </aside>
 
           <div css={contentWrapperStyle}>
-            <h1>스터디부터 프로젝트까지</h1>
-            <h2>혼자서는 힘든 경험을 제공합니다.</h2>
+            <div>
+              <h1>스터디부터 프로젝트까지</h1>
+              <h2>혼자서는 힘든 경험을 제공합니다.</h2>
+            </div>
 
             <div css={imageWrapperStyle}>
               <div css={imageStyle}>
@@ -67,19 +69,30 @@ const sectionStyle = css`
   margin-top: 120px;
 `;
 
-const wrapperStyle = css`
+const wrapperStyle = (theme: Theme) => css`
   width: 100%;
   height: 500px;
   display: flex;
+
+  ${theme.mediaQuery.mobile} {
+    flex-direction: column;
+  }
 `;
 
-const asideStyle = css`
+const asideStyle = (theme: Theme) => css`
   width: 16rem;
   height: 100%;
 
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+
+  ${theme.mediaQuery.mobile} {
+    width: 100%;
+    height: auto;
+    flex-direction: row;
+    justify-content: space-between;
+  }
 `;
 
 const contentWrapperStyle = (theme: Theme) => css`
@@ -97,9 +110,14 @@ const contentWrapperStyle = (theme: Theme) => css`
   & h2 {
     font-weight: ${theme.fontWeight.light};
   }
+
+  ${theme.mediaQuery.mobile} {
+    flex-direction: column-reverse;
+    width: 100%;
+  }
 `;
 
-const imageWrapperStyle = css`
+const imageWrapperStyle = (theme: Theme) => css`
   margin-top: 32px;
   width: 100%;
   height: 100%;
@@ -108,13 +126,23 @@ const imageWrapperStyle = css`
 
   overflow-y: hidden;
   overflow-x: scroll;
+
+  ${theme.mediaQuery.mobile} {
+    margin-top: 12px;
+    height: 200px;
+  }
 `;
 
-const imageStyle = css`
+const imageStyle = (theme: Theme) => css`
   position: relative;
   overflow: hidden;
   flex-shrink: 0;
   width: 400px;
   height: 80%;
   border-radius: 20px;
+
+  ${theme.mediaQuery.mobile} {
+    width: 300px;
+    height: 90%;
+  }
 `;
