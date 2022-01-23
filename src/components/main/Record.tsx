@@ -78,6 +78,8 @@ const wrapperStyle = (theme: Theme) => css`
 
   ${theme.mediaQuery.mobile} {
     flex-direction: column;
+    justify-content: center;
+    height: auto;
   }
 `;
 
@@ -99,7 +101,7 @@ const asideStyle = (theme: Theme) => css`
 
 const contentWrapperStyle = (theme: Theme) => css`
   width: 500px;
-  height: 100%;
+  /* height: 100%; */
   flex-grow: 1;
   display: flex;
   flex-direction: column;
@@ -130,7 +132,6 @@ const imageWrapperStyle = (theme: Theme) => css`
   overflow-x: scroll;
 
   ${theme.mediaQuery.mobile} {
-    margin-top: 12px;
     height: 200px;
   }
 `;
@@ -145,6 +146,6 @@ const imageStyle = (theme: Theme) => css`
 
   ${theme.mediaQuery.mobile} {
     width: 300px;
-    height: 90%;
+    height: 80%;
   }
 `;

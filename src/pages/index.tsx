@@ -14,7 +14,4 @@ function Home() {
 
 export default Home;
 
-const mainStyle = css`
-  width: 100vw;
-  /* overflow-x: hidden; */
-`;
+const mainStyle = css``;

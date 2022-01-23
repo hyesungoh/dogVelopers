@@ -1,9 +1,7 @@
 import { css, Theme } from '@emotion/react';
 
 import Layout from 'components/common/Layout';
-import LottieWrapper from 'components/common/LottieWrapper';
-
-import bubbleBgLottieData from 'assets/lottie/bubbleBg.json';
+import Background from 'components/main/Background';
 
 function Introduce() {
   return (
@@ -19,19 +17,15 @@ function Introduce() {
           </p>
         </div>
       </Layout>
-      <div css={lottieWrapperStyle}>
-        <LottieWrapper lottieData={bubbleBgLottieData} />
-      </div>
+
+      <Background />
     </section>
   );
 }
 
 export default Introduce;
 
-const sectionStyle = css`
-  position: relative;
-  overflow-x: clip;
-`;
+const sectionStyle = css``;
 
 const wrapperStyle = css`
   width: 100%;
@@ -53,17 +47,4 @@ const dscStyle = (theme: Theme) => css`
   margin-top: 12px;
   font-size: 1.5rem;
   font-weight: ${theme.fontWeight.light};
-`;
-
-const lottieWrapperStyle = (theme: Theme) => css`
-  position: absolute;
-  top: -80px;
-  right: 0;
-  width: 100vw;
-  z-index: -1;
-
-  ${theme.mediaQuery.tablet} {
-    width: 180vw;
-    right: -30vw;
-  }
 `;
