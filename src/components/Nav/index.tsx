@@ -29,6 +29,7 @@ const navStyle = (theme: Theme) => css`
   top: 0;
   height: 80px;
   background-color: ${theme.color.black900};
+  z-index: 2;
 `;
 
 const wrapperStyle = css`

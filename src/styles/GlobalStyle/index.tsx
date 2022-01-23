@@ -19,6 +19,7 @@ const globalStyle = (theme: Theme) => css`
     font-family: 'Noto Sans KR', sans-serif;
     font-weight: ${theme.fontWeight.normal};
     font-size: 16px;
+    overflow-x: hidden;
 
     ${theme.mediaQuery.tablet} {
       font-size: 14px;

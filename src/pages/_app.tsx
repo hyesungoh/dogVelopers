@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import type { AppProps } from 'next/app';
 
 import { ThemeProvider } from '@emotion/react';
@@ -6,7 +7,6 @@ import GlobalStyle from 'styles/GlobalStyle';
 
 import Nav from 'components/Nav';
 import Footer from 'components/Footer';
-import Head from 'next/head';
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
