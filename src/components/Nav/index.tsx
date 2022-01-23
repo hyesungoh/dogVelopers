@@ -40,7 +40,8 @@ const wrapperStyle = css`
   align-items: center;
 `;
 
-const logoAnchorStyle = (theme: Theme) => css`
+const logoAnchorStyle = css`
+  cursor: pointer;
   font-size: 1.5rem;
 `;
 
