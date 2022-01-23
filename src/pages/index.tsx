@@ -1,23 +1,19 @@
-import { css, Theme } from '@emotion/react';
-import Layout from 'components/common/Layout';
+import { css } from '@emotion/react';
 import Header from 'components/main/Header';
+import Introduce from 'components/main/Introduce';
 
 function Home() {
   return (
-    <main css={dCss}>
+    <main css={mainStyle}>
       <Header />
-      <section>
-        <Layout>
-          <h1>개발자들</h1>
-        </Layout>
-      </section>
+      <Introduce />
     </main>
   );
 }
 
 export default Home;
 
-const dCss = (theme: Theme) => css`
-  width: 100%;
-  height: 2000px;
+const mainStyle = css`
+  width: 100vw;
+  overflow-x: clip;
 `;
