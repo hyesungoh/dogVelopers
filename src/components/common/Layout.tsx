@@ -12,6 +12,7 @@ function Layout({ children }: ILayoutProps) {
 export default Layout;
 
 const wrapperStyle = css`
+  position: inherit;
   width: 100%;
   max-width: 1024px;
   height: 100%;

@@ -24,11 +24,10 @@ function Nav() {
 
 export default Nav;
 
-const navStyle = (theme: Theme) => css`
+const navStyle = css`
   position: sticky;
   top: 0;
   height: 80px;
-  background-color: ${theme.color.black900};
   z-index: 2;
 `;
 

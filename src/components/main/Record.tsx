@@ -65,6 +65,7 @@ function Record() {
 export default Record;
 
 const sectionStyle = css`
+  position: relative;
   width: 100%;
   margin-top: 120px;
 `;
