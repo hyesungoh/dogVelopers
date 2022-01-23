@@ -13,7 +13,7 @@ const theme: Theme = {
     bold: 700,
   },
   mediaQuery: {
-    tablet: '@media (max-width: 768px)',
+    tablet: '@media (max-width: 830px)',
     mobile: '@media (max-width: 425px)',
   },
 };

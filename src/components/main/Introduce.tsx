@@ -30,12 +30,12 @@ export default Introduce;
 
 const sectionStyle = css`
   position: relative;
+  overflow-x: clip;
 `;
 
 const wrapperStyle = css`
   width: 100%;
   height: 80vh;
-  overflow-y: hidden;
 
   display: flex;
   flex-direction: column;
@@ -62,7 +62,7 @@ const lottieWrapperStyle = (theme: Theme) => css`
   width: 100vw;
   z-index: -1;
 
-  ${theme.mediaQuery.mobile} {
+  ${theme.mediaQuery.tablet} {
     width: 180vw;
     right: -30vw;
   }

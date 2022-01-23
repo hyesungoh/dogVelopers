@@ -67,12 +67,13 @@ export default Record;
 const sectionStyle = css`
   position: relative;
   width: 100%;
+  height: 500px;
   margin-top: 120px;
 `;
 
 const wrapperStyle = (theme: Theme) => css`
   width: 100%;
-  height: 500px;
+  height: 100%;
   display: flex;
 
   ${theme.mediaQuery.mobile} {

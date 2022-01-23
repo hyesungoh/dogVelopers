@@ -16,5 +16,5 @@ export default Home;
 
 const mainStyle = css`
   width: 100vw;
-  overflow-x: clip;
+  /* overflow-x: hidden; */
 `;
