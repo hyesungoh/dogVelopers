@@ -1,5 +1,4 @@
 import { css, Theme } from '@emotion/react';
-import { motion } from 'framer-motion';
 
 import Layout from 'components/common/Layout';
 
@@ -25,7 +24,7 @@ export default Introduce;
 
 const sectionStyle = css`
   position: relative;
-  margin-top: 120px;
+  margin-top: 180px;
 `;
 
 const wrapperStyle = css`
@@ -43,7 +42,7 @@ const titleStyle = (theme: Theme) => css`
   font-weight: ${theme.fontWeight.light};
 `;
 
-const dscStyle = (theme: Theme) => css`
+const dscStyle = css`
   margin-top: 12px;
   font-size: 1.25rem;
 `;
