@@ -9,12 +9,12 @@ import { inViewFadeInUpVariants } from 'constants/motions';
 
 const articles = [
   { title: '탄생한지', value: `${getCurrentYear() - 2016}년` },
-  { title: '누적 멤버 수', value: '50명 +' },
-  { title: '진행 스터디', value: '2N개' },
+  { title: '누적 멤버 수', value: '60명 +' },
+  { title: '진행 스터디', value: '3N개' },
   { title: '진행 프로젝트', value: '2N개' },
 ];
 
-function Record() {
+function RecordSection() {
   return (
     <motion.section
       css={sectionStyle}
@@ -62,7 +62,7 @@ function Record() {
   );
 }
 
-export default Record;
+export default RecordSection;
 
 const sectionStyle = css`
   position: relative;

@@ -3,7 +3,7 @@ import { css, Theme } from '@emotion/react';
 import Layout from 'components/common/Layout';
 import Background from 'components/main/Background';
 
-function Introduce() {
+function IntroduceSection() {
   return (
     <section css={sectionStyle}>
       <Layout>
@@ -23,7 +23,7 @@ function Introduce() {
   );
 }
 
-export default Introduce;
+export default IntroduceSection;
 
 const sectionStyle = css``;
 
