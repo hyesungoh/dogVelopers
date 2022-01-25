@@ -1,4 +1,7 @@
 import { css, Theme } from '@emotion/react';
+import { motion } from 'framer-motion';
+
+import { inViewLeftInVariants } from 'constants/motions';
 
 interface IRecordArticle {
   title: string;
@@ -7,10 +10,19 @@ interface IRecordArticle {
 
 function RecordArticle({ title, value }: IRecordArticle) {
   return (
-    <article css={articleStyle}>
+    <motion.article
+      css={articleStyle}
+      initial="initial"
+      whileInView="whileInView"
+      variants={inViewLeftInVariants}
+      viewport={{
+        once: false,
+        margin: '-100px 0px -100px 0px',
+      }}
+    >
       <span css={titleStyle}>{title}</span>
       <span css={valueStyle}>{value}</span>
-    </article>
+    </motion.article>
   );
 }
 
