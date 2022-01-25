@@ -13,7 +13,7 @@ function Footer() {
           <div css={rightStyle}>
             <a href="instagram.com">Instagram</a>
             <a href="instagram.com">Facebook</a>
-            <a href="instagram.com">Email</a>
+            <a href="mailto:haesungoh414@gmail.com">Email</a>
           </div>
         </div>
       </Layout>

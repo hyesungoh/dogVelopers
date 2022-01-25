@@ -1,13 +1,15 @@
 import { css } from '@emotion/react';
 
-import Introduce from 'components/main/Introduce';
-import Record from 'components/main/Record';
+import IntroduceSection from 'components/main/IntroduceSection';
+import RecordSection from 'components/main/RecordSection';
+import HangoutSection from 'components/main/HangoutSection';
 
 function Home() {
   return (
     <main css={mainStyle}>
-      <Introduce />
-      <Record />
+      <IntroduceSection />
+      <RecordSection />
+      <HangoutSection />
     </main>
   );
 }
