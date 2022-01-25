@@ -21,7 +21,7 @@ class DogvelopersDocument extends Document {
       <Html lang="ko">
         <Head>
           <link rel="icon" href="/favicon.ico" />
-          <meta property="og:image" content="/vercel.svg" />
+          <meta property="og:image" content="/metabackground.jpeg" />
 
           <meta httpEquiv="Content-type" content="text/html; charset=utf-8" />
           <meta property="og:title" content="동아리 개발자들" />

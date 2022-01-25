@@ -30,6 +30,11 @@ const globalStyle = (theme: Theme) => css`
     }
   }
 
+  body {
+    width: 100vw;
+    overflow-x: hidden;
+  }
+
   h1 {
     font-weight: ${theme.fontWeight.bold};
   }
