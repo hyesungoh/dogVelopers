@@ -1,9 +1,9 @@
 import { css, Theme } from '@emotion/react';
 import { motion } from 'framer-motion';
-import Image from 'next/image';
 
 import Layout from 'components/common/Layout';
 import RecordArticle from 'components/main/RecordArticle';
+import RecordImage from 'components/main/RecordImage';
 import { getCurrentYear } from 'utils/date';
 import { inViewFadeInUpVariants } from 'constants/motions';
 
@@ -14,15 +14,11 @@ const articles = [
   { title: '진행 프로젝트', value: '2N개' },
 ];
 
+const images = ['/study1.jpeg', '/study2.jpeg'];
+
 function RecordSection() {
   return (
-    <motion.section
-      css={sectionStyle}
-      initial="initial"
-      whileInView="whileInView"
-      variants={inViewFadeInUpVariants}
-      viewport={{ once: false, margin: '-150px' }}
-    >
+    <section css={sectionStyle}>
       <Layout>
         <div css={wrapperStyle}>
           <aside css={asideStyle}>
@@ -33,32 +29,33 @@ function RecordSection() {
 
           <div css={contentWrapperStyle}>
             <div>
-              <h1>스터디부터 프로젝트까지</h1>
-              <h2>혼자서는 힘든 경험을 제공합니다.</h2>
+              <motion.h1
+                initial="initial"
+                whileInView="whileInView"
+                variants={inViewFadeInUpVariants}
+                viewport={{ once: false, margin: '-100px' }}
+              >
+                스터디부터 프로젝트까지
+              </motion.h1>
+              <motion.h2
+                initial="initial"
+                whileInView="whileInView"
+                variants={inViewFadeInUpVariants}
+                viewport={{ once: false, margin: '-100px' }}
+              >
+                혼자서는 힘든 경험을 제공합니다.
+              </motion.h2>
             </div>
 
             <div css={imageWrapperStyle}>
-              <div css={imageStyle}>
-                <Image
-                  src="/study1.jpeg"
-                  alt="study1"
-                  layout="fill"
-                  objectFit="cover"
-                />
-              </div>
-              <div css={imageStyle}>
-                <Image
-                  src="/study2.jpeg"
-                  alt="study1"
-                  layout="fill"
-                  objectFit="cover"
-                />
-              </div>
+              {images.map((imageSrc, index) => (
+                <RecordImage key={index} imageSrc={imageSrc} />
+              ))}
             </div>
           </div>
         </div>
       </Layout>
-    </motion.section>
+    </section>
   );
 }
 
@@ -86,10 +83,10 @@ const wrapperStyle = (theme: Theme) => css`
 const asideStyle = (theme: Theme) => css`
   width: 16rem;
   height: 100%;
-
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  overflow-y: hidden;
 
   ${theme.mediaQuery.mobile} {
     width: 100%;
@@ -133,19 +130,5 @@ const imageWrapperStyle = (theme: Theme) => css`
 
   ${theme.mediaQuery.mobile} {
     height: 180px;
-  }
-`;
-
-const imageStyle = (theme: Theme) => css`
-  position: relative;
-  overflow: hidden;
-  flex-shrink: 0;
-  width: 400px;
-  height: 80%;
-  border-radius: 20px;
-
-  ${theme.mediaQuery.mobile} {
-    width: 300px;
-    height: 90%;
   }
 `;

@@ -18,5 +18,5 @@ const wrapperStyle = css`
   height: 100%;
   padding: 0 1.375rem;
   margin: 0 auto;
-  overflow-x: hidden;
+  overflow: hidden;
 `;

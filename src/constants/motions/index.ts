@@ -24,13 +24,43 @@ export const inViewFadeInUpVariants: Variants = {
 export const inViewRightInVariants: Variants = {
   initial: {
     opacity: 0,
-    x: 50,
+    x: 30,
     transition: { duration: 0.5, ease: defaultEasing },
     willChange: 'opacity, transform',
   },
   whileInView: {
     opacity: 1,
     x: 0,
+    transition: { duration: 0.5, ease: defaultEasing },
+    willChange: 'opacity, transform',
+  },
+};
+
+export const inViewLeftInVariants: Variants = {
+  initial: {
+    opacity: 0,
+    x: -30,
+    transition: { duration: 0.5, ease: defaultEasing },
+    willChange: 'opacity, transform',
+  },
+  whileInView: {
+    opacity: 1,
+    x: 0,
+    transition: { duration: 0.5, ease: defaultEasing },
+    willChange: 'opacity, transform',
+  },
+};
+
+export const inViewGrowVariants: Variants = {
+  initial: {
+    opacity: 0,
+    scale: 0.9,
+    transition: { duration: 0.5, ease: defaultEasing },
+    willChange: 'opacity, transform',
+  },
+  whileInView: {
+    opacity: 1,
+    scale: 1,
     transition: { duration: 0.5, ease: defaultEasing },
     willChange: 'opacity, transform',
   },
