@@ -21,6 +21,21 @@ export const inViewFadeInUpVariants: Variants = {
   },
 };
 
+export const inViewRightInVariants: Variants = {
+  initial: {
+    opacity: 0,
+    x: 50,
+    transition: { duration: 0.5, ease: defaultEasing },
+    willChange: 'opacity, transform',
+  },
+  whileInView: {
+    opacity: 1,
+    x: 0,
+    transition: { duration: 0.5, ease: defaultEasing },
+    willChange: 'opacity, transform',
+  },
+};
+
 export const defaultFadeInUpVariants: Variants = {
   initial: {
     opacity: 0,
