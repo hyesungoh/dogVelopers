@@ -101,7 +101,6 @@ const asideStyle = (theme: Theme) => css`
 
 const contentWrapperStyle = (theme: Theme) => css`
   width: 500px;
-  /* height: 100%; */
   flex-grow: 1;
   display: flex;
   flex-direction: column;
@@ -118,6 +117,7 @@ const contentWrapperStyle = (theme: Theme) => css`
   ${theme.mediaQuery.mobile} {
     flex-direction: column-reverse;
     width: 100%;
+    height: auto;
   }
 `;
 
@@ -132,7 +132,7 @@ const imageWrapperStyle = (theme: Theme) => css`
   overflow-x: scroll;
 
   ${theme.mediaQuery.mobile} {
-    height: 200px;
+    height: 180px;
   }
 `;
 
@@ -146,6 +146,6 @@ const imageStyle = (theme: Theme) => css`
 
   ${theme.mediaQuery.mobile} {
     width: 300px;
-    height: 80%;
+    height: 90%;
   }
 `;
