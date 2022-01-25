@@ -1,11 +1,19 @@
-import { css, Theme } from '@emotion/react';
 import Link from 'next/link';
+import { css, Theme } from '@emotion/react';
+import { motion, useTransform, useViewportScroll } from 'framer-motion';
 
 import Layout from 'components/common/Layout';
 
 function Nav() {
+  const { scrollY } = useViewportScroll();
+  const bgOpacityByScroll = useTransform(scrollY, [0, 500, 750], [0, 0, 1]);
+
   return (
     <nav css={navStyle}>
+      <motion.div
+        css={backgroundStyle}
+        style={{ opacity: bgOpacityByScroll }}
+      ></motion.div>
       <Layout>
         <div css={wrapperStyle}>
           <Link href="/" passHref>
@@ -29,6 +37,15 @@ const navStyle = css`
   top: 0;
   height: 80px;
   z-index: 2;
+`;
+
+const backgroundStyle = (theme: Theme) => css`
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: ${theme.color.black900};
 `;
 
 const wrapperStyle = css`
