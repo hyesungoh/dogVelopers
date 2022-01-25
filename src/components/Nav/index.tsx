@@ -20,8 +20,8 @@ function Nav() {
             <h1 css={logoAnchorStyle}>DogVelopers</h1>
           </Link>
           <div css={rightWrapperStyle}>
-            <a>program</a>
-            <a>team</a>
+            {/* <a>program</a>
+            <a>team</a> */}
             <button css={joinBtnStyle}>JOIN US</button>
           </div>
         </div>
