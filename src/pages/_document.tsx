@@ -27,12 +27,27 @@ class DogvelopersDocument extends Document {
           <meta property="og:title" content="동아리 개발자들" />
           <meta property="og:description" content="동아리 개발자들" />
 
-          {/* font */}
+          {/* for font */}
           <link rel="preconnect" href="https://fonts.googleapis.com" />
           <link rel="preconnect" href="https://fonts.gstatic.com" />
           <link
             href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;500;700&display=swap"
             rel="stylesheet"
+          />
+
+          {/* for google analytics */}
+          <script
+            async
+            src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_ID}`}
+          ></script>
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', '${process.env.NEXT_PUBLIC_GA_ID}');`,
+            }}
           />
         </Head>
         <body>
