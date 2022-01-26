@@ -4,6 +4,9 @@ import { motion, useTransform, useViewportScroll } from 'framer-motion';
 
 import Layout from 'components/common/Layout';
 
+const recrutNotionUrl =
+  'https://gratis-sting-e5a.notion.site/6-Recruiting-cee2f41b841e41d48d3a6cf12ad1a753';
+
 function Nav() {
   const { scrollY } = useViewportScroll();
   const bgOpacityByScroll = useTransform(scrollY, [0, 500, 750], [0, 0, 1]);
@@ -22,7 +25,11 @@ function Nav() {
           <div css={rightWrapperStyle}>
             {/* <a>program</a>
             <a>team</a> */}
-            <button css={joinBtnStyle}>JOIN US</button>
+            <Link href={recrutNotionUrl} passHref>
+              <a target="_blank" css={joinBtnStyle}>
+                JOIN US
+              </a>
+            </Link>
           </div>
         </div>
       </Layout>
