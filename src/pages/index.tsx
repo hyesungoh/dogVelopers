@@ -3,6 +3,7 @@ import { css } from '@emotion/react';
 import IntroduceSection from 'components/main/IntroduceSection';
 import RecordSection from 'components/main/RecordSection';
 import HangoutSection from 'components/main/HangoutSection';
+import RecruitSection from 'components/main/RecruitSection';
 
 function Home() {
   return (
@@ -10,6 +11,7 @@ function Home() {
       <IntroduceSection />
       <RecordSection />
       <HangoutSection />
+      <RecruitSection />
     </main>
   );
 }
