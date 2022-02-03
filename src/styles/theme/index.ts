@@ -5,6 +5,7 @@ const theme: Theme = {
     white: '#FBFBFD',
     black900: '#141414',
     black500: '#191919',
+    gray: '#393939',
     brand: '#D86B6C',
   },
   fontWeight: {
