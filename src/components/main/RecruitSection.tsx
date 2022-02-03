@@ -1,8 +1,11 @@
-import { css, Theme, keyframes } from '@emotion/react';
+import Link from 'next/link';
+import { css, Theme } from '@emotion/react';
 import { motion } from 'framer-motion';
 
 import Layout from 'components/common/Layout';
 import RecruitProblemArticle from 'components/main/RecruitProblemArticle';
+import { recrutNotionUrl } from 'constants/recruit';
+import { inViewRightInVariants, inViewGrowVariants } from 'constants/motions';
 
 function RecruitSection() {
   return (
@@ -22,11 +25,37 @@ function RecruitSection() {
           </div>
 
           <div css={applySectionStyle}>
-            <motion.h1>괜찮아요</motion.h1>
-            <motion.h2>개발자들에서 도와드릴게요</motion.h2>
-            <motion.button css={applyBtnStyle}>
-              지금 바로 지원하러가기
-            </motion.button>
+            <motion.h1
+              initial="initial"
+              whileInView="whileInView"
+              variants={inViewRightInVariants}
+              viewport={{ once: false, margin: '-100px' }}
+            >
+              괜찮아요
+            </motion.h1>
+            <motion.h2
+              initial="initial"
+              whileInView="whileInView"
+              variants={inViewRightInVariants}
+              viewport={{ once: false, margin: '-100px' }}
+            >
+              개발자들에서 도와드릴게요
+            </motion.h2>
+
+            <Link href={recrutNotionUrl} passHref>
+              <motion.a
+                target="_blank"
+                css={applyAnchorStyle}
+                initial="initial"
+                whileInView="whileInView"
+                variants={inViewGrowVariants}
+                viewport={{ once: false, margin: '-100px' }}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 1.05 }}
+              >
+                지금 바로 지원하러가기
+              </motion.a>
+            </Link>
           </div>
         </div>
       </Layout>
@@ -73,38 +102,13 @@ const applySectionStyle = (theme: Theme) => css`
   }
 `;
 
-const applyBtnAnimation = keyframes`
-  0% {
-    transform: rotate(0deg);
-  }
-  50% {
-    transform: rotate(0deg);
-  }
-  60% {
-    transform: rotate(2deg);
-  }
-  70% {
-    transform: rotate(-1deg);
-  }
-  80% {
-    transform: rotate(1.5deg);
-  }
-  90% {
-    transform: rotate(-2.5deg);
-  }
-  100% {
-    transform: rotate(0deg);
-  }
-`;
-
-const applyBtnStyle = (theme: Theme) => css`
+const applyAnchorStyle = (theme: Theme) => css`
   align-self: flex-start;
   margin-top: 50px;
   padding: 18px 26px;
   background-color: ${theme.color.brand};
   border-radius: 24px;
   font-size: 1.25rem;
-  animation: ${applyBtnAnimation} 2s infinite;
 
   ${theme.mediaQuery.mobile} {
     align-self: center;
