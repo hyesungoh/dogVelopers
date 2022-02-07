@@ -7,6 +7,10 @@ import Document, {
   NextScript,
 } from 'next/document';
 
+const TITLE = '동아리 개발자들';
+const DESCRIPTION =
+  '개발자들은 대학생 개발자 동아리로써 여러 스터디와 프로젝트를 통해 개개인의 역량과 협업 능력을 증대시키고자 합니다.';
+
 class DogvelopersDocument extends Document {
   static async getInitialProps(
     ctx: DocumentContext
@@ -21,11 +25,21 @@ class DogvelopersDocument extends Document {
       <Html lang="ko">
         <Head>
           <link rel="icon" href="/favicon.ico" />
+          <meta httpEquiv="Content-type" content="text/html; charset=utf-8" />
+
+          <meta name="description" content={DESCRIPTION} />
+          <meta
+            name="keywords"
+            content="IT동아리,개발자들,개발자,성공회대,개발동아리,대학생,대학생개발동아리,IT,동아리"
+          />
+          <meta property="og:url" content="https://www.dogvelopers.com" />
+          <meta property="og:title" content={TITLE} />
+          <meta property="og:description" content={DESCRIPTION} />
           <meta property="og:image" content="/metabackground.jpeg" />
 
-          <meta httpEquiv="Content-type" content="text/html; charset=utf-8" />
-          <meta property="og:title" content="동아리 개발자들" />
-          <meta property="og:description" content="동아리 개발자들" />
+          {/* for twitter */}
+          <meta name="twitter:title" content={TITLE} />
+          <meta name="twitter:description" content={DESCRIPTION} />
 
           {/* for font */}
           <link rel="preconnect" href="https://fonts.googleapis.com" />
