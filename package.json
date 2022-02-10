@@ -11,6 +11,7 @@
     "@emotion/babel-plugin": "^11.7.2",
     "@emotion/babel-preset-css-prop": "^11.2.0",
     "@emotion/react": "^11.7.1",
+    "@sentry/nextjs": "^6.17.6",
     "@types/axios": "^0.14.0",
     "@types/react-lottie": "^1.2.6",
     "axios": "^0.25.0",

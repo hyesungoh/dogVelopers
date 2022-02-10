@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import type { AppProps } from 'next/app';
+import * as Sentry from '@sentry/nextjs';
 
 import { ThemeProvider } from '@emotion/react';
 import theme from 'styles/theme';
@@ -9,6 +10,8 @@ import Nav from 'components/Nav';
 import Footer from 'components/Footer';
 
 function MyApp({ Component, pageProps }: AppProps) {
+  Sentry.init({ dsn: process.env.NEXT_PUBLIC_SENTRY_DSN });
+
   return (
     <ThemeProvider theme={theme}>
       <Head>
