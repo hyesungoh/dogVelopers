@@ -11,8 +11,13 @@ function Footer() {
             <p css={copyrightStyle}>DogVelopers. All rights reserved.</p>
           </div>
           <div css={rightStyle}>
-            <a href="instagram.com">Instagram</a>
-            <a href="instagram.com">Facebook</a>
+            <a
+              href="https://www.facebook.com/SKHUDevelopers/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Facebook
+            </a>
             <a href="mailto:mail.dogvelopers@gmail.com">Email</a>
           </div>
         </div>
