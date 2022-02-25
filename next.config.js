@@ -3,6 +3,7 @@ const { withSentryConfig } = require('@sentry/nextjs');
 const withBundleAnalyzer = require('@next/bundle-analyzer')({
   enabled: process.env.ANALYZE === 'true',
 });
+const CompressionPlugin = require('compression-webpack-plugin');
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
@@ -23,7 +24,9 @@ module.exports = withPlugins(
     withBundleAnalyzer({
       compress: true,
       webpack(config) {
-        return { ...config };
+        const plugins = [...config.plugins, new CompressionPlugin()];
+
+        return { ...config, plugins };
       },
     }),
   ],

@@ -18,6 +18,7 @@ const globalStyle = (theme: Theme) => css`
     background-color: ${theme.color.black900};
     font-family: 'Noto Sans KR', sans-serif;
     font-weight: ${theme.fontWeight.normal};
+    font-display: swap;
     font-size: 16px;
     word-break: keep-all;
 
