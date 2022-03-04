@@ -15,7 +15,7 @@ const theme: Theme = {
   },
   mediaQuery: {
     tablet: '@media (max-width: 830px)',
-    mobile: '@media (max-width: 425px)',
+    mobile: '@media (max-width: 430px)',
   },
 };
 
